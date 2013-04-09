@@ -102,7 +102,7 @@ Catalyst::Model::DynamicAdaptor - Dynamically load adaptor modules
  sub BUILD {
 
  .....
-'
+
  }
 
  1;
