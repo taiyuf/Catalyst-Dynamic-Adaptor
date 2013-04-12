@@ -26,10 +26,13 @@ You can call MyApp::Logic::* as MyApp::Model::Logic::*.
     use Moose;
     use namespace::autoclean;
     
+    has 'catalyst' => (is => 'rw');
+    
     sub ACCEPT_CONTEXT {
         my ($self, $c, @array) = @_;
     
         # use catalyst object: $c as you like.
+        $self->catalyst($c);
     
     return $self.
     }
@@ -53,7 +56,7 @@ and create some child class.
     
     sub bar {
         my $self = shift;
-    
+        my $c    = $self->catalyst;
     ....
     
     }
