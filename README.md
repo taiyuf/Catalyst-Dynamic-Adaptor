@@ -1,5 +1,7 @@
 Catalyst-Model-DynamicAdaptor
 ===============
+[![Coverage Status](https://coveralls.io/repos/taiyuf/Catalyst-Dynamic-Adaptor/badge.png?branch=master)](https://coveralls.io/r/taiyuf/Catalyst-Dynamic-Adaptor)
+
 This is Dynamically load adaptor modules by perl.
 
 # How to use
@@ -70,7 +72,7 @@ and create some child class.
     sub foo : Local {
         my ( $self, $c ) = @_;
     
-        $c->model('Logic::Foo')->bar() ; 
+        $c->model('Logic::Foo')->bar() ;
     }
     
     1;
